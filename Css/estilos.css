@@ -9,10 +9,10 @@
 header{
   display: flex;
   justify-content: space-between;
-  height: 70px;
+  height: 4%;
   background-color: #de3535;
   align-items: center;
-  padding: 10px;
+  padding: 2%;
 }
 
 .Headerrr{
@@ -23,9 +23,9 @@ header{
 /*------------------------------------------------------*/
 
 .imagenes{
-    height: 200%;
-    width: 50%;
-    border-radius: 20px; /*Con esto le puse el borde redondeado a las fotos*/
+    height: 100%;
+    width: 100%;
+    border-radius: 5%; /*Con esto le puse el borde redondeado a las fotos*/
 
 }
 
@@ -41,10 +41,17 @@ header{
 
 .container {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-auto-rows: 100px;
-    grid-gap: 250px;
+    grid-gap: 6%;
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: 20%;
+            
   }
+
+.peli{
+  box-sizing: border-box;
+  height: 90%;
+  padding: 10% 10% 18% 10%;
+}
 
 .letras{
     -webkit-text-fill-color: #de3535;
@@ -52,4 +59,27 @@ header{
 
 h3{
     letter-spacing: 2px;
+}
+
+@media screen and (max-width: 600px) {
+  .container{
+    grid-gap: 1%;
+    grid-template-columns: repeat(1, 1fr);
+    grid-auto-rows: 10%;  
+  }
+  .peli{
+    padding-bottom: 20%;
+  }
+}
+
+@media screen and (min-width:992px) {
+  .container{
+    grid-gap: 5%;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 35%);  
+     
+  }
+  .peli{
+    padding-bottom: 30%;
+  }
 }
